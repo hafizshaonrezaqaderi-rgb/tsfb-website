@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>T.S.F.B | তাজেদারে সুন্নীয়ত ফাউন্ডেশন বাংলাদেশ</title>
+<style>
+:root{--green:#103b2c;--deep:#09271e;--gold:#c9a34b;--cream:#f7f3e8;--ink:#1d3329}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:"Noto Sans Bengali","SolaimanLipi",system-ui,sans-serif}
+header{background:linear-gradient(135deg,var(--deep),var(--green));color:white;text-align:center;padding:22px 14px 18px;border-bottom:4px solid var(--gold)}
+header img{width:138px;height:138px;object-fit:contain;border-radius:50%;background:#fff;padding:3px}
+h1{font-size:clamp(22px,5vw,32px);margin:9px 0 2px;color:#f3d78e}header p{margin:4px;color:#f5e9c9}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;padding:12px;background:#fff;position:sticky;top:0;z-index:2;box-shadow:0 2px 9px #0001}
+button,.navbtn{border:0;border-radius:9px;padding:10px 13px;background:var(--green);color:#fff;font:inherit;cursor:pointer}
+button.secondary,.navbtn.secondary{background:#e9e1cf;color:var(--green);border:1px solid #d6c69f}
+main{max-width:850px;margin:22px auto;padding:0 14px}.card{background:#fff;border:1px solid #e5dcc8;border-radius:16px;padding:20px;margin:14px 0;box-shadow:0 5px 18px #183d2b0b}
+h2{color:var(--green);margin-top:0}.muted{color:#68776e;font-size:14px}.field{display:block;margin:12px 0}.field span{display:block;margin-bottom:5px;font-weight:600}
+input,select,textarea{width:100%;padding:12px;border:1px solid #cfc8b8;border-radius:9px;font:inherit;background:#fff}
+.notice{background:#fff8e7;border-left:4px solid var(--gold);padding:12px;border-radius:8px;font-size:14px}
+.hidden{display:none!important}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.stat{background:#f5f1e6;border-radius:12px;padding:15px}
+footer{text-align:center;background:var(--deep);color:#e9d9b4;padding:22px;margin-top:30px;font-size:14px}
+.small{font-size:12px}.pill{display:inline-block;background:#e9f3e9;color:#17613d;padding:4px 9px;border-radius:30px;font-size:12px}
+</style></head>
+<body>
+<header>
+<img src="logo.png" alt="T.S.F.B সংগঠনের লোগো">
+<h1>T. S. F. B</h1>
+<strong>তাজেদারে সুন্নীয়ত ফাউন্ডেশন বাংলাদেশ</strong>
+<p>সুন্নিয়তের আলো ছড়িয়ে, মানবতার কল্যাণে</p>
+</header>
+<nav>
+<button class="secondary" onclick="show('home')">হোম</button>
+<button class="secondary" onclick="show('login')">লগইন</button>
+<button class="secondary" onclick="show('pledge')">অঙ্গীকারনামা</button>
+<button class="secondary" onclick="show('member')">সদস্য ফরম</button>
+<button class="secondary" onclick="show('fund')">তহবিল</button>
+<button class="secondary" onclick="show('admin')">অ্যাডমিন ডেমো</button>
+</nav>
+<main>
+<section id="home" class="page card">
+<h2>আসসালামু আলাইকুম</h2>
+<p>T.S.F.B-এর সদস্য ও শুভাকাঙ্ক্ষীদের স্বাগতম। এই ওয়েবসাইটটি সংগঠনের পরিচিতি, সদস্য নিবন্ধন, অঙ্গীকারনামা এবং তহবিল ব্যবস্থাপনার একটি প্রাথমিক ডেমো।</p>
+<div class="grid">
+<div class="stat"><b>সদস্য নিবন্ধন</b><p class="muted">অনলাইনে সদস্যের তথ্য জমা দেওয়ার নমুনা ফরম।</p></div>
+<div class="stat"><b>অঙ্গীকারনামা</b><p class="muted">সংগঠনের নীতিমালা পড়ে সম্মতি জানান।</p></div>
+<div class="stat"><b>তহবিল</b><p class="muted">সাপ্তাহিক ও মাসিক অনুদানের নমুনা বিভাগ।</p></div>
+</div>
+<div class="card">
+<h2>চেয়ারম্যান</h2><b>হাফেজ শাওন রেজা কাদেরী</b><p>চেয়ারম্যান, তাজেদারে সুন্নীয়ত ফাউন্ডেশন বাংলাদেশ</p><p>যোগাযোগ: 01798132489</p>
+</div>
+</section>
+<section id="login" class="page card hidden">
+<h2>সদস্য লগইন</h2>
+<label class="field"><span>লগইনের মাধ্যম</span><select id="loginMethod"><option>মোবাইল নম্বর</option><option>ইমেইল</option><option>Facebook (পরবর্তী সংস্করণে)</option></select></label>
+<label class="field"><span>মোবাইল / ইমেইল</span><input id="loginContact" placeholder="আপনার মোবাইল নম্বর বা ইমেইল"></label>
+<button onclick="demoLogin()">ডেমো লগইন</button><p class="muted">এটি কেবল নকশার ডেমো। এখানে OTP বা আসল অ্যাকাউন্ট যাচাই হয় না।</p>
+</section>
+<section id="pledge" class="page card hidden">
+<h2>সংগঠনের অঙ্গীকারনামা</h2>
+<ol><li>সংগঠনের গঠনতন্ত্র, আদর্শ ও বৈধ সিদ্ধান্ত মেনে চলব।</li><li>আহলে সুন্নাত ওয়াল জামাতের শিক্ষা ও মূল্যবোধ প্রচারে শালীনতা বজায় রাখব।</li><li>সংগঠনের ঐক্য, শৃঙ্খলা ও সুনাম রক্ষায় সচেষ্ট থাকব।</li><li>মানবসেবা ও কল্যাণমূলক কাজে সামর্থ্য অনুযায়ী অংশ নেব।</li><li>আর্থিক লেনদেনে স্বচ্ছতা ও জবাবদিহিতা বজায় রাখতে সহযোগিতা করব।</li></ol>
+<label><input id="agree" type="checkbox" style="width:auto"> আমি অঙ্গীকারনামাটি পড়েছি এবং সম্মত।</label>
+<p><button onclick="if(document.getElementById('agree').checked)show('member');else alert('আগে সম্মতি দিন।')">সম্মতি দিয়ে সদস্য ফরমে যান</button></p>
+</section>
+<section id="member" class="page card hidden">
+<h2>সদস্য নিবন্ধন ফরম</h2>
+<label class="field"><span>পূর্ণ নাম</span><input id="mName" placeholder="আপনার নাম"></label>
+<label class="field"><span>পিতার নাম</span><input placeholder="পিতার নাম"></label>
+<label class="field"><span>মোবাইল নম্বর</span><input id="mPhone" placeholder="01XXXXXXXXX"></label>
+<label class="field"><span>ইমেইল (ঐচ্ছিক)</span><input type="email" placeholder="name@example.com"></label>
+<label class="field"><span>ঠিকানা</span><textarea rows="2" placeholder="বর্তমান ঠিকানা"></textarea></label>
+<label class="field"><span>সদস্যের ধরন</span><select><option>সাধারণ সদস্য</option><option>কর্মী সদস্য</option><option>আজীবন সদস্য</option></select></label>
+<button onclick="saveDemoMember()">ডেমো ফরম জমা দিন</button>
+<p id="memberMsg" class="notice hidden"></p>
+<p class="muted">ডেমোতে তথ্য শুধু এই ব্রাউজারের সাময়িক সেশনে দেখানো হয়; সার্ভারে সংরক্ষিত হয় না।</p>
+</section>
+<section id="fund" class="page card hidden">
+<h2>সাপ্তাহিক / মাসিক তহবিল</h2>
+<div class="notice">এটি পেমেন্টের নমুনা পৃষ্ঠা। এখানে কোনো টাকা পাঠাবেন না। নগদ পেমেন্ট চালু করতে অনুমোদিত মার্চেন্ট/পেমেন্ট গেটওয়ে এবং নিরাপদ সার্ভার প্রয়োজন।</div>
+<label class="field"><span>অনুদানের ধরন</span><select id="period"><option>সাপ্তাহিক</option><option>মাসিক</option><option>এককালীন</option></select></label>
+<label class="field"><span>পরিমাণ (৳)</span><input id="amount" type="number" min="1" placeholder="যেমন 100"></label>
+<button onclick="fundPreview()">অনুদানের বিবরণ দেখুন</button><p id="fundMsg" class="notice hidden"></p>
+</section>
+<section id="admin" class="page card hidden">
+<h2>অ্যাডমিন প্যানেল — নকশা</h2>
+<span class="pill">শুধু চেয়ারম্যানের জন্য পরিকল্পিত</span>
+<p>বাস্তব সংস্করণে শুধু আপনার যাচাইকৃত অ্যাডমিন অ্যাকাউন্ট থেকে সদস্য অনুমোদন/বাতিল, সদস্য তালিকা, অনুদানের রেকর্ড ও হিসাব পরিচালনা করা যাবে।</p>
+<div class="grid"><div class="stat"><b>সদস্য অনুমোদন</b><p class="muted">Pending / Approved / Rejected</p></div><div class="stat"><b>তহবিল হিসাব</b><p class="muted">জমা, রসিদ ও রিপোর্ট</p></div><div class="stat"><b>সদস্য ব্যবস্থাপনা</b><p class="muted">তথ্য দেখা ও সংশোধন</p></div></div>
+<div class="notice">নিরাপত্তার কারণে ডেমোতে কোনো পাসওয়ার্ড বা গোপন অ্যাডমিন কোড রাখা হয়নি। লাইভ করার আগে সার্ভার-সাইড অ্যাডমিন অনুমতি বসাতে হবে।</div>
+</section>
+</main>
+<footer><b>T. S. F. B</b><br>তাজেদারে সুন্নীয়ত ফাউন্ডেশন বাংলাদেশ<br><span class="small">প্রাথমিক ডেমো — প্রকৃত সদস্য ডেটা বা অর্থ লেনদেনের জন্য নয়</span></footer>
+<script>
+function show(id){document.querySelectorAll('.page').forEach(x=>x.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');window.scrollTo(0,0)}
+function demoLogin(){let v=document.getElementById('loginContact').value.trim();if(!v){alert('মোবাইল নম্বর বা ইমেইল লিখুন।');return}alert('ডেমো লগইন সফল হয়েছে। প্রকৃত OTP যাচাই এখনো সংযুক্ত নয়।');show('pledge')}
+function saveDemoMember(){let n=document.getElementById('mName').value.trim(),p=document.getElementById('mPhone').value.trim();if(!n||!p){alert('নাম ও মোবাইল নম্বর পূরণ করুন।');return}let m=document.getElementById('memberMsg');m.textContent='ধন্যবাদ, '+n+'। আপনার ডেমো ফরম গ্রহণ করা হয়েছে। প্রকৃত নিবন্ধনের জন্য সার্ভার সংযোগ প্রয়োজন।';m.classList.remove('hidden')}
+function fundPreview(){let a=Number(document.getElementById('amount').value);if(!a||a<1){alert('সঠিক টাকার পরিমাণ লিখুন।');return}let m=document.getElementById('fundMsg');m.textContent=document.getElementById('period').value+' অনুদান: ৳'+a+'। এটি শুধু প্রিভিউ; কোনো পেমেন্ট হবে না।';m.classList.remove('hidden')}
+</script></body></html>
